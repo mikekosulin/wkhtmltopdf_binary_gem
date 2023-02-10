@@ -76,6 +76,6 @@ class WithDockerTest < Minitest::Test
   end
 
   def test_on_docker(with:)
-    assert_equal('wkhtmltopdf 0.12.6 (with patched qt)', `docker-compose run --rm #{with}`.strip)
+    assert_match(/wkhtmltopdf 0\.12\.6(.1)? \(with patched qt\)/, `docker-compose run --rm #{with}`.strip)
   end
 end
