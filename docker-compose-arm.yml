@@ -21,3 +21,10 @@ services:
       dockerfile: .docker/Dockerfile-debian_11_arm
     volumes:
       - .:/root/wkhtmltopdf_binary_gem
+
+  debian_12:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-debian_12_arm
+    volumes:
+      - .:/root/wkhtmltopdf_binary_gem
